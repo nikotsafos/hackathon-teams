@@ -3,12 +3,12 @@
 <form action="/teams/<%=team.name%>" id="edit-team">
   <div class="form-group">
     <label for="teamName">Team</label>
-    <input type="text" class="form-control" id="teamName" value="<%=team.name%>"  name="name">
+    <input required type="text" class="form-control" id="teamName" value="<%=team.name%>"  name="name">
   </div>
 
   <div class="form-group">
     <label for="teamMembers" class="hidden">Members</label>
-    <input type="text" class="form-control" id="teamMembers" name="members" value="<%=team.members%>">
+    <input required type="text" class="form-control" id="teamMembers" name="members" value="<%=team.members%>">
   </div>
 
   <input type="submit" class="btn btn-primary"/>

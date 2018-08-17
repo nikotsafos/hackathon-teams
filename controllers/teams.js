@@ -26,7 +26,7 @@ router.get('/:name', function(req, res) {
 });
 
 router.get('/edit/:name', function(req, res) {
-  var team = (teamService.getTeam(req.params.name));
+  var team = teamService.getTeam(req.params.name);
   res.render('teams/edit', {team :team});
 });
 
@@ -37,6 +37,7 @@ router.put('/:name', function(req, res) {
 
 router.delete('/:name', function(req, res){
   teamService.deleteTeam(req.params.name);
+  res.send('delete');
   });
 
 
